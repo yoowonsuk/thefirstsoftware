@@ -1,0 +1,11 @@
+NAME	COUNTRY	SEX 	AGE  POINTS 
+Frank	usa	M	32	4323:001
+John	usa	M	61	232:002
+Mark	italy	M	43	2243:013
+Lara	spain	F	32	2321:007
+Daila	spain	F	32	1928:032
+Robert	germany	M	51	219:121
+Lisa	usa	F	22	2314:000
+BOB	france	M	27	576:002	
+R	italy	M	32	32
+
