@@ -22,3 +22,24 @@ echo $?
 file not there
 => 2
 
+mydate() {
+    echo "function"
+}
+
+hello2() {
+    echo "hello $1 "
+    echo "hello also to $2 "
+}
+
+hello2 "Mark" "blabla"
+
+return 35
+$?
+
+variable in function is global variable
+local var="Eggs"
+
+
+
+
+
