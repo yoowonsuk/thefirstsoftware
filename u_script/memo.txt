@@ -116,3 +116,7 @@ echo hi there
 which ls / pwd / bash / python
 open /bin 안에서 실행해보기
 
+man
+
+$PATH
+PATH=$PATH:$pwd  # subl .profile
