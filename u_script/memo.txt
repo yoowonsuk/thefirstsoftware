@@ -126,3 +126,5 @@ PATH=$PATH:$pwd  # subl .profile
 All BASH options for if-clauses can be found under the section CONDITIONAL EXPRESSIONS of the documentation (man bash).
 -n string
 True if the length of string is non-zero.
+https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_01.html
+https://www.pluralsight.com/resources/blog/cloud/conditions-in-bash-scripting-if-statements
