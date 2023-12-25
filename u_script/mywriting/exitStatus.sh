@@ -3,7 +3,7 @@
 echo $?
 => 0
 
-pwd - asdfsdf
+pwd -asdfsdf
 echo $?
 => 1
 
