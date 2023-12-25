@@ -94,6 +94,7 @@ cd
 ls $s
 ``도 가능
 
+https://stackoverflow.com/questions/6749128/store-output-of-sed-into-a-variable
 sed -n 2p myfile  # 2 번째 줄 출력
 echo $1 | sed '3q;d' abc  # 3 번째 줄 출력
 
