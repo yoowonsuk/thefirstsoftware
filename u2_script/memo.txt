@@ -1,0 +1,81 @@
+ls -F # / : directory, * : executable
+ls -ld direcotry
+cd - # before
+cp -v bla_2 bla_3
+cp -i bla dir-9 (overwrite)
+rm -i bla
+cat -n $file
+cat $file $file1
+
+cat <
+hello
+
+less (new command line) => n, b   / search
+more,cat (present command line)
+
+echo -e => \n \t \t\t \c (cancel new line) \v (\t \n \t, vertical tab)
+
+touch -c $file (update timestamp if exists, otherwise nothing happens)
+mkdir -p new_fold/somefolder_1
+
+*
+? -> Any single character
+ls ??.txt
+[] -> or
+ls [abc]*
+ls [abc][ab].txt
+! -> exclude
+[!abc] -> any character that is not 'a' 'b' or 'c'
+character classes [[:alpha:]]
+ls [[:alpha:]]*.txt
+ls [[:digit:]]*.txt
+ls [[:lower:]]*.txt
+ls [[:upper:]]*.txt
+
+echo ${var}
+echo ${bob}
+parenthesis
+
+unset bob
+echo ${#a} # length
+echo ${a:4} # start with fourth char
+echo ${b:4:3}
+echo ${a: -3} # last three
+echo ${a:0}
+echo ${a: -4:2}
+
+b="hello there"
+echo ${b#h} # remove h temporarily
+> ello there
+echo ${b#w}
+> hello there
+echo ${b#*t}
+> here
+
+a=123456789
+echo ${a%9} # end
+> 12345678
+echo ${a%3*}
+> 12
+
+.profile .bashrc .bash_profile .login
+
+read
+echo $REPLY
+
+redirect stdout 1>
+stderror 2>
+
+ls -l 1> a_file.txt
+1>> >>
+cat file1 file2 > file3
+
+cat
+cat 1> file
+
+ls -l asdfsdf 2> file
+
+&> (standard output, standard error)
+ls -l asdf 1> file 2> file
+
+ech "hello" 2> /dev/null
