@@ -79,3 +79,31 @@ ls -l asdfsdf 2> file
 ls -l asdf 1> file 2> file
 
 ech "hello" 2> /dev/null
+
+tail -4 file
+ls dir | tail -3 | sort | less
+ls dir | tail -3 | sort > file
+
+grep -i
+ls | grep t
+grep -v
+
+echo {1, 2, 3}
+> 1 2 3
+echo {1,2,3,4}file
+> 1file 2file 3file 4file
+echo example{1..13}
+example1 ...  example13
+
+touch file{1..8}
+mkdir myfolder_{4..12}
+
+echo {a,b,c}_{1,2,3} #combination
+
+chmod u=r file
+
+=== section 2 ===
+gedit hello
+subl hello
+
+
