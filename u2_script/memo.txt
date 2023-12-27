@@ -106,4 +106,101 @@ chmod u=r file
 gedit hello
 subl hello
 
+if [ $num -eq 18 ]; then
+if [ $num -ne 18 ]; then
+if [ $num -lt 18 ]; then #lower than
+if [ $num -gt 18 ]; then
+if [ $num -le 18 ]; then
+if [ $num -ge 18 ]; then
 
+if [ -e "$myfile" ]; then
+if [ -d "$mydir" ]; then
+if [ -s "$myfile" ]; then # not empty
+
+if [ -r "$myfile" ]; then
+if [ -w "$myfile" ]; then
+if [ -x "$myfile" ]; then
+
+if [ ! -s "$myfile" ]; then # empty
+
+if [ $num -gt 3 -a $num -lt 3 ]; then
+if [ $num -lt 3 -o $num -gt 3 ]; then
+if [ -s "$myfile" -a -x "$myfile" ]; then
+
+if [[ $num -lt 10 && num -gt 3]]; then
+AND ---> && (ofc -a works)
+OR ---> || (ofc -o works)
+
+for i in {1,2,3,4}; do
+    touch "${i}.xls"
+done
+
+for i in {3..12}; do
+for i in {b..f}_file; do
+for i in {b..f}{1..3}; do
+
+for i in {1, 2, 3}; do
+    if [ $i == "2" ]; then
+        break;
+    fi
+done
+
+for i in ./* ; do
+for i in ./*.txt ; do
+
+for (( i = 0; i < 25; i=i+1 )); do
+done
+
+back 4 (cd ../ x4)
+
+bash or sh <= subshell, sh is old
+exit
+
+source script.sh
+exit -> current shell 나감
+. script.sh (동일)
+
+=== 3개 ===
+type cat # executable program; cat; ourscripts
+> cat is /bin/cat
+
+type cd # shell builtins; cd; type
+> cd is a shell builtin
+
+type lf # alias
+lf is a aliased to ls -Flha
+=== 3개 ===
+
+alias ll='ls -l'
+alias yellow='ls ../'
+type yellow
+alias yellow
+
+multiple command
+; && |
+
+ls; cd; echo "hello"
+alias cpl='clear; pwd; echo "###"; ls -l'
+unalias yellow
+alias
+
+subl .profile
+
+# Command Substitution --- command expansion
+which cd
+ls -l /usr/bin/cd
+=> ls -l $(which cd)
+
+# storing output of a command inside a variable
+a=$(pwd)
+
+d=$(date)
+echo ""$d --- $(date)"
+
+$1 parameter
+$(12) 12 번째 인자
+$# the number of parameter
+$@ all parameters
+=> for i in "$@"; do
+
+$* 도 전체지만 for loop에서 전체가 하나로 인식됨
