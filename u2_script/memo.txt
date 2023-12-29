@@ -204,3 +204,28 @@ $@ all parameters
 => for i in "$@"; do
 
 $* 도 전체지만 for loop에서 전체가 하나로 인식됨
+
+$PATH
+PATH="dir:${PATH}"
+export PATH
+env
+
+echo $?
+man pwd
+search(/)exit
+
+mydate() {
+}
+mydate
+
+hello2() {
+    echo "hello $1"
+    echo "hello also to $2"
+    return 35
+}
+hello2 "MArk" "blabla"
+echo "return value of my func $?"
+# exit 100
+
+local var # python is opposite
+

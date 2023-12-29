@@ -1,0 +1,16 @@
+#! /bin/bash
+
+max="$1"
+
+for i in {1..$max}; do
+    cd ../
+done
+
+echo "$(pwd)"
+
+
+#for (( i = 0; i<=$max; i++)); do
+#    cd ../
+#done
+
+alias back='source back'

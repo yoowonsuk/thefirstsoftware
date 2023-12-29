@@ -1,0 +1,38 @@
+echo $(( 3 + 5 ))
+echo $(( 3 **(-2) )) # no
+echo $(( 1/2 )) # 0
+
+=> bc
+
+scale # decimal point
+
+-q # quiet
+
+REDIREFT
+cat << AAA
+> dsfklj
+> sdfsdf
+> AAA
+
+cat << _EOF_
+> 123
+> sdfd
+> _EOF_
+
+bc << EOF
+> 3+2
+> 4*5
+> EOF
+
+
+
+# command 'here string' or <<<
+# command <<< 'string'
+
+cat <<< "hello there"
+hello there
+
+bc program exists
+
+<< here-document : ending text
+<<< here-string : string input
