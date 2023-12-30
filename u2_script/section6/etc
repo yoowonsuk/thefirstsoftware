@@ -1,0 +1,28 @@
+#! /bin/bash
+
+FILE=/etc/passwd
+
+read -p "enter the name of the username: " user_name
+
+#user_name="applypay"
+
+info=$(grep "$user_name" $FILE)
+
+echo "$info"
+old_IFS=$IFS
+IFS=$:
+if [ -n "$info" ]; then
+	read user pw uid git full home shell <<< "$info"
+
+	echo "user is $user "
+	echo "pass is $pass"
+	echo "uid is $uid"
+	echo "gid is $gid"
+	echo "name is $name"
+	echo "home is $home"
+	echo "shell is $shell"
+else
+	echo "no"
+fi
+
+IFS=$old_IFS

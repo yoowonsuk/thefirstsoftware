@@ -1,0 +1,29 @@
+ls A-folder | less
+
+ls A-folder > temporaryoutput.txt
+cat temporaryoutput.txt
+
+wc; wordcount
+
+wc #lines, words, characters
+echo "hello" | wc
+
+wc -l
+wc -w
+wc -c == -m
+
+echo "abc defg hif" | wc
+wc <<< "hi there 123"
+wc << EOF
+hi
+there
+how are you
+?
+EOF
+
+ls -l | wc -l
+ls -l *txt | wc -l
+
+strings
+strings -n 2 $file
+strings -2 $file

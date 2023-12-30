@@ -1,0 +1,101 @@
+a[0]="ball"
+a[1]="one glass"
+a[2]=22
+a[3]="a pencile"
+
+echo ${a[0]} # not $a[0]
+
+days=(mon tue wed thu fri)
+
+for i in {0..4}; do
+	echo "${days[i]}"
+done
+
+echo${days[@]}
+echo${days[*]}
+
+for element in "${days[@]}"; do
+	echo "our item is $element"
+done
+
+# if days[*], one thing
+
+b=(10 20 30 hello)
+echo ${#b[@]}
+> 4
+
+c[0]=0
+c[3]=hey
+c[7]=70
+c[2]=20
+
+echo ${c[@]}
+> 0 20 hey 70
+
+echo ${!c[@]} # index
+
+c+=(90 and END) # append
+unset c
+days=120 # first element
+
+cut -c 1 $file # get first character
+cut -c 3 $file # get second character
+cut -b 3 $file # not clear
+
+cut -c 1-3 $file
+cut -c 3- $file
+cut -c -4 $file
+cut -c 1,3 $file
+
+echo "something inside here" | cut -c 2-5
+echo -c 3- <<< "string redirect :)))"
+
+cut -d "," -f 1 $file  # delimiter
+cut -d "," -f 1-3 $file
+cut -d "," -f 1,4 $file
+
+stat $file
+stat --format %letter $file
+stat --format %n $file
+stat -c %n $file
+stat -c %A $file
+stat -c %a $file
+stat -c %U $file
+stat -c %u $file
+man stat
+
+echo $UID
+
+stat -c %F $file
+stat -c %s $file #total size
+stat -c %x $file #access time
+stat -c %X $file #Unix time 1970 jan 1st 0000
+date +%s
+
+stat -c %y $file #modify time
+stat -c %Y $file #Unix time 1970 jan 1st 0000
+stat -c %z $file #last changed time
+stat -c %Z $file #Unix time 1970 jan 1st 0000
+
+stat -x $file
+alias stat="stat -x"
+unalias stat
+
+stat -f %letter file
+stat -f %N $file
+stat -f %Sp $file # not capital but S(string) 
+                  # p is permissions
+stat -f %u $file
+stat -f %Su $file
+stat -f %g $file
+stat -f %Sg $file
+
+man stat
+stat -f %z $file # size
+stat -f %a $file # last time access
+stat -f %Sa $file # last time access
+stat -f %m $file # modify time access
+stat -f %Sm $file # modify time access
+stat -f %c $file # change time access
+stat -f %Sc $file # change time access
+

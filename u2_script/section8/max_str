@@ -1,0 +1,30 @@
+#! /bin/bash
+
+echo " ******* MAX STRING Script ********"
+
+file_name="$1"
+
+s=$(strings -1 "$file_name");
+
+#echo $s
+#if [ -r "$file_name" ]; then
+
+ref_word='';
+max_len=0;
+
+for i in $s;
+do
+	echo "$i"
+	#len=$(echo "$i" | wc -c);
+	#len=$(calc $len-1)
+	len=${#i}
+	echo "$i ---> $len"
+	if [ $len -gt $max_len ]; then
+		ref_word=$i
+		max_len=$len;
+	fi
+
+done
+
+
+#time max_str text.txt

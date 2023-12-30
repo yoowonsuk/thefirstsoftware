@@ -1,0 +1,15 @@
+path
+
+path -c ls # present
+patch -c grep
+
+which ls
+which grep
+which clear
+path -c clear
+
+echo $PATH
+path -d /usr/bin # /usr/bin/
+path -d ~/something
+
+

@@ -1,0 +1,18 @@
+#! /bin/bash
+
+x="aa bb cc dd";
+
+for i in $x;
+do
+    echo $1
+done
+
+old_IFS=$IFS
+IFS="_"
+x="aa_bb_cc_dd" #one data
+
+
+IFS=$old_IFS;
+
+
+read a b c d e <<< "hi_there_how_are_you"

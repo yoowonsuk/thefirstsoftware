@@ -1,0 +1,14 @@
+read a b c d
+10 20 30 40 50 60 70 # last gets 40 50 60 70
+
+echo "hello" | cat
+echo "10" | read w # not work
+read a <<< "green 45"
+read a b c d e f <<< "green 45 50 60 70 80 90"
+
+read a b c d
+10;20;30;40
+echo $a
+10;20;30;40
+
+
