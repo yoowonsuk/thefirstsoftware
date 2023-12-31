@@ -1,7 +1,7 @@
 path
 
 path -c ls # present
-patch -c grep
+path -c grep
 
 which ls
 which grep
