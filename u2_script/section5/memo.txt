@@ -8,7 +8,7 @@ scale # decimal point
 
 -q # quiet
 
-REDIREFT
+REDIRECT
 cat << AAA
 > dsfklj
 > sdfsdf
