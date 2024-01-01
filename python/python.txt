@@ -1,0 +1,6 @@
+Hi Guys
+This is a Python Tutorial
+We are working on Comprehensions here
+List comprehension is our current topic
+parsing a file is what we are discussing right now
+I hope you are loving and learning it
