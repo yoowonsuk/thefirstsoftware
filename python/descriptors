@@ -1,0 +1,35 @@
+set comprehension
+{expression(variable) for variable in input_set [predicate][, ...]}
+
+intput = [1,2,2,2,3,3,3,4,5,5,6,6,7,7,7,8]
+
+output = set{}
+for var in input:
+    if var % 2 == 0:
+        output.add(var)
+
+print(output)
+
+output = {var for var in input if var % 2 == 0}
+
+input = [1,2,3,4,4,5,6,7,7,7]
+# output = (var for var in input if var% 2 == 0)
+
+print("Output values using Gen Comprehension: ", end =' ')
+for var in output:
+    print(var, end=' ')
+
+
+
+Descriptors
+__get__() __set__() __delete__()
+descr.__method__(self, obj, type=None) -> value
+
+get : non-data descriptor
+set, delete : non-data descriptor
+
+def __getatrribute__(self, key):
+    x = object.__getattribute__(self, key)
+    if hasattr(x, '__get__'):
+        return x.__get__(None, self)
+    return x
