@@ -1,0 +1,44 @@
+property (fget=None, fset=None, fdel=None, doc=None)
+
+class Person:
+    def __init__(self, name):
+        self._name=name
+    def getName(self):
+        print("Getting the Name")
+        return self._name
+    def setName(self, name):
+        print("Setting the Name to :" + name)
+        self._name=name
+    def delName(self):
+        print("Deleting the Name")
+        del self._name
+
+    name = property(getName, setName, delName)
+
+name = Person("John")
+print(name.name)
+
+name.name="Price"
+del name.name
+
+
+# using class methods
+
+class descriptors:
+    def __init__(self, x=""):
+        self.x=x
+    def __get__(self, obj, objtype):
+        return "{}for{}".format(self.x,self.x)
+    def __set__(self, obj, x):
+        if isinstance(x, str):
+            self.x=x
+        else:
+            raise TypeError("x should always be a string")
+
+class A(object):
+    x = descriptors()
+
+y=A()
+y.x="John"
+#y.x=12
+print(y.x)
