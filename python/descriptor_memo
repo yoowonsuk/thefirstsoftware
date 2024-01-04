@@ -38,6 +38,64 @@ class descriptors:
 class A(object):
     x = descriptors()
 
+@property -> Getting
+@x.setter -> Setting
+@x.deleter -> Deleting
+
+class Person:
+    def __init__(self,name):
+        self._name=name
+
+    @property
+    def name(self):
+        print("Getting the Name")
+        return self._name
+
+    @name.setting
+    def name(self,name):
+        print("Setting the name to : "+ name)
+        self._name=name
+
+    @name.deleter
+    def name(self):
+        print("Deleting the name")
+        del self._name
+
+x = Person("John")
+print(x.name)
+x.name="Price"
+del x.name
+
+Why descriptors?
+Lazy Properties
+https://velog.io/@kho5420/Python-Lazy-Evaluation-%EC%9D%B4%EB%9E%80
+https://www.youtube.com/watch?v=6Dy3dZE1LK4
+https://realpython.com/python-descriptors/
+import random
+import time
+
+class Lazy:
+    def __init__(self, function):
+        self.function=function
+        self.name=function.__name__
+    def __get__(self,obj,type=None) -> object:
+        obj.__dict__[self.name]=self.function(obj)
+        return obj.__dict__[self.name]
+
+class Waiting:
+    @Lazy
+    def wait(self):
+        time.sleep(3)
+        return 42
+
+
+x=Waiting()
+#print(x.wait())
+#print(x.wait())
+#print(x.wait())
+print(x.wait)
+print(x.wait)
+print(x.wait)
 y=A()
 y.x="John"
 #y.x=12
