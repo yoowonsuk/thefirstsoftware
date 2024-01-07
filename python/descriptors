@@ -26,7 +26,7 @@ __get__() __set__() __delete__()
 descr.__method__(self, obj, type=None) -> value
 
 get : non-data descriptor
-set, delete : non-data descriptor
+set, delete : data descriptor
 
 def __getatrribute__(self, key):
     x = object.__getattribute__(self, key)

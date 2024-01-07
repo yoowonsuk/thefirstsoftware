@@ -100,3 +100,90 @@ y=A()
 y.x="John"
 #y.x=12
 print(y.x)
+
+class EvenNumber:
+    def __set_name__(self,owner,name):
+        self.name=name
+    def __get__(self,obj,type=None)->object:
+        return obj.__dict__.get(self.name) # or 0
+    def __set__(self, obj, value)->None:
+        obj.__dict__[self.name] = (value if value % 2 == 0 else 0)
+
+class Values:
+    def __init__(self):
+        self._values1 = EvenNumber()
+        self._values2 = EvenNumber()
+        self._values3 = EvenNumber()
+        self._values4 = EvenNumber()
+        self._values5 = EvenNumber()
+'''
+        self._values1 = 0
+        self._values2 = 0
+        self._values3 = 0
+        self._values4 = 0
+        self._values5 = 0
+
+    @property
+    def values1(self):
+        return self._value1
+    @value1.setter
+    def value1(self, value):
+        self._value1 = value if value % 2 == 0 else 0
+
+    @property
+    def value2(self):
+        return self._value2
+    @value2.setter
+    def value2(self, value):
+        self._value2 = value if value % 2 == 0 else 0
+
+    @property
+    def value3(self):
+        return self._value3
+    @value3.setter
+    def value3(self, value):
+        self._value3 = value if value % 2 == 0 else 0
+
+    @property
+    def value4(self):
+        return self._value4
+    @value4.setter
+    def value4(self, value):
+        self._value4 = value if value % 2 == 0 else 0
+
+    @property
+    def value5(self):
+        return self._value5
+    @value5.setter
+    def value5(self, value):
+        self._value5 = value if value % 2 == 0 else 0
+'''
+
+my_values = Values()
+my_values.value1 = 1
+my_values.value2 = 4
+print(my_values.value1)
+print(my_values.value2)
+
+
+
+The __set_name__ is called after the class has been defined (so that the class can be passed as the owner argument), not immediately after the assignment is made. So to correct the code we need call the EvenNumber class this way:
+
+class Values:
+    value1 = EvenNumber()
+    value2 = EvenNumber()
+Other way to set the EvenNumber and do the exact same thing is:
+
+class EvenNumber:
+    def __set_name__(self, owner, name):
+        self.public_name = name
+        self.private_name = "__" + name
+ 
+    def __get__(self, obj, type=None) -> object:
+        value = getattr(obj, self.private_name)
+        return value
+        # return obj.__dict__.get(self.public_name) #old way
+ 
+    def __set__(self, obj, value) -> None:
+        setattr(obj, self.private_name, (value if value%2 == 0 else 0))
+        # obj.__dict__[self.public_name] = (value if value%2 == 0 else 0) # old way
