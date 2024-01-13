@@ -1,0 +1,44 @@
+Object-Oriented Programming
+#Functional Programming
+#Procedural Programming
+
+IDE
+- IDLE
+- VS Code
+- PyCharm
+- Jupyter (https://colab.research.google.com/)
+
+execute : ctrl + enter
+next cell : shift + enter
+# means heading size
+
+# All language elements are in this code
+a = 4 
+b = 5 
+c = [6, 7, 8]
+
+d = "HI"
+"Hello"
+
+def area(x):
+    return x**2
+
+area(3)
+
+inty = 5 
+listy = [6, 7]
+
+stringy = "Hi"
+
+import folium # pip3 install folium
+azores = folium.folium.Map(location = (38, -27), zoom_start = 6)
+
+type(inty), type(listy), type(stringy), type(azores)
+
+"hi".captialze()
+> "HI"
+
+folium.folium.Map(location = (38, -27), zoom_start = 6).save("output.html")
+!ls
+folium.__file__
+
