@@ -1,0 +1,5 @@
+__new__(cls, other) # first memory allocation
+__init__(self, other) # none memory allocation
+__del__(self)
+
+
