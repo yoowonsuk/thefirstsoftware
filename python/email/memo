@@ -1,0 +1,9 @@
+SMTP - send
+POP3
+IMAP
+
+smtplib
+re (regular expression)
+Tkinter (GUI)
+
+port 587 25

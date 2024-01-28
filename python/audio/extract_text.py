@@ -1,0 +1,18 @@
+import PyPDF2
+
+fileobject = open("test.pdf", "rb")
+#pdffileReader = PyPDF2.PdfFileReader(fileobject)
+pdffileReader = PyPDF2.PdfReader(fileobject)
+extracted_text = ""
+
+#for pageNum in range(pdffileReader.numPages):
+for pageNum in range(len(pdffileReader.pages)):
+    #pdfpageObj = pdffileReader.getPage(pageNum)
+    pdfpageObj = pdffileReader.pages[pageNum]
+    #extracted_text += pdfpageObj.extractText()
+    extracted_text += pdfpageObj.extract_text()
+
+fileobject.close()
+print(extracted_text)
+
+                    
