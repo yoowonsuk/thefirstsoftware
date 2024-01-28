@@ -1,0 +1,28 @@
+coefficient
+correlation -1, 1 or 0
+
+P-Values
+R-Squared
+Adj R-Squared
+
+null hypothesis
+So for example in case of a coin, our null hypothesis might be that the coin is a fair coin
+
+Alternative Hypothesis: It's the opposite of or rejection of null hypothesis e.g in case of a coin we might reject our claim and say that the coin is not a fair coin
+
+p-value : probability
+ex) e-value < 0.001 reject the null hypothesis
+(significant value = 0.001)
+
+
+remove non-sense variables
+correlation
+multi-collinearity (between indepentent variables) => redundant
+
+dummy variables
+
+https://ys-cs17.tistory.com/93
+backward elimination -> testing crtieria : p-value
+forward selection -> testing crtieria : Adj R-Squared
+
+
