@@ -1,10 +1,37 @@
-import numpy as np
 from PIL import Image
+import numpy as np
 
-# Create 3d numpy array of zeros, then replace zeros (black pixels) with yell pxls
-data = np.zeros((5, 4, 3), dtype=np.uint8)
-data[:] = [255,255,0]
-print(data)
+class Canvas:
+    
+    def __init__(self, a, b, color):
+        self.color = color
+	self.a = a
+	self.b = b
 
-img = Image.fromarray(data, 'RGB')
-img.save('canvas.png')
+    def make(self):
+        pass
+
+class Rectangle:
+
+    def __init__(self, x, y, a, b, color):
+        self.x = x
+	self.y = y
+	self.a = a
+	self.b = b
+	self.color = color
+    
+    def draw(self, canvas):
+        pass
+
+class Square:
+    
+    def __init__(self, x, y, a, color):
+        self.color = color
+	self.x = x
+	self.y = y
+	self.a = a
+
+    def draw(self, canvas):
+        pass
+
+# structure tabs
