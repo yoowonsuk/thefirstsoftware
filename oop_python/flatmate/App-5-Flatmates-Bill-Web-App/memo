@@ -1,0 +1,19 @@
+www.w3schools.com/cssref/css_colors.asp
+
+https://www.pythonanywhere.com/user/ardit123
+remove "app.run() "
+
+comment : control + /
+change form action="/bill_form"
+
+copy post to BillFormPage
+render_template('bill_form_page.html')
+
+copy results.html body to it
+
+// jinja template
+// render_template parameter result=True
+{% if result %}
+{{name1}} pays...
+{{name2}} pays...
+{% endif %}

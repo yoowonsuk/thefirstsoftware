@@ -80,7 +80,7 @@ class FileSharer: #open for extension and closed for modification
     def share(self):
         client = Client(self.api_key)
 
-        new_filelink = client.upload(filepath=filepath=self.filepath)
+        new_filelink = client.upload(filepath=self.filepath)
         #print(type(new_filelink))
         #print(new_filelink.url)
         return new_filelink.url

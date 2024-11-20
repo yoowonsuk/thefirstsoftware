@@ -1,0 +1,31 @@
+pip install wikipedia
+or Pycharm settings -> Project -> Python Interpreter -> wikipedia
+
+python console!
+import wikipedia
+wikipedia
+
+page = wikipedia.page("beach")
+
+type(page)
+
+dir(page)
+
+page.summary
+page.images
+len(page.images)
+page.images[0]
+
+"again, install requests package"
+import requests
+
+link = page.images[0]
+req = requests.get(link)
+type(req)
+req.content
+type(req.content) > bytes
+
+with open("the_beach.jpg", 'wb') as file:
+    file wrtie(req.content)
+
+ 
