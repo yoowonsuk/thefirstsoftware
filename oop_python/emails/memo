@@ -1,0 +1,25 @@
+newsapi.org
+-> documentation
+-> get api key
+
+Ardit
+pythonprocourse1@gmail.com
+Your API key is: 890603a55bfa47048e4490069ebee18c
+
+hong
+tetofe1435@kimasoft.com
+My API key is: 47d2c0b06bc7454d904934f9349561ce
+
+dropmail.me/en/
+ctrl _ P to see what other methods we can prass there
+
+main -> news copy
+
+import datetime
+today = datetime.datetime.now()
+today = datetime.datetime.now().strftime('%Y-%m-%d')
+yesterday = datetime.datetime.now() - datetime.timedelta(days=1)
+yerterday.strftime('%y-%m-%d')
+
+Introduce Variable!!
+Extract method
