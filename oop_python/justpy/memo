@@ -1,0 +1,15 @@
+pip install pandas
+
+import pandas
+df = pandas.read_csv("data.csv")
+
+df.word
+type(df.word)
+df['word']
+
+df.loc[df['word']=='acid rain']
+v1 = df.loc[df['word']=='acid rain']
+v2 = df.loc[df['word']=='acid rain']['definition']
+result = tuple(df.loc[df['word']=='acid rain']['definition'])
+result = tuple(df.loc[df['word']=='acid']['definition'])
+
