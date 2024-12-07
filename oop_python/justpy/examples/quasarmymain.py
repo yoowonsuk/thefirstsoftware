@@ -3,6 +3,9 @@ import justpy as jp
 
 @jp.SetRoute("/home")
 def home():
+    wp = jp.QuasarPage() # ignore tailwind
+    #wp = jp.QuasarPage(tailwind=True) 
+
     wp = jp.WebPage() # if nothing inside, 500 error
     # wp = jp.WebPage(classes="bg-gray-200") # not working
     div = jp.Div(a=wp, classes="bg-gray-200 h-screen")
@@ -15,8 +18,15 @@ def home():
     jp.Div(a=div1, text="Yet another div", class="text-gray-600")
 
     div2 = jp.Div(a=div, classes="grid grid-cols-2 gap-4")
+
+    '''
     jp.Button(a=div2, text="Calculate", click=sum_up, in1=in_1, in2=in_2, d = d_output, mouseenter=mouse_enter, mouseleave=mouse_leave, classes="border border-blue=500 m-2 p-2 rounded "
     "text-blue-600 hover:bg-red-500 hover:text-white") # margin padding py-2 means padding vertical
+    '''
+
+# quasar.dev page
+# Vue(.js) Components # javascript framework
+    jp.QBtn(a=div2, color="primary", label="primary", icon="map", text="Calculate", click=sum_up, in1=in_1, in2=in_2, d = d_output, mouseenter=mouse_enter, mouseleave=mouse_leave)
     jp.Div(a=div2, text="I am a cool interactive div!")
     #jp.Div(a=div2, text="I am a cool interactive div!", classes="hover:bg-red-500") # but classes' usually concerned about styling
 

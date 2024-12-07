@@ -13,3 +13,7 @@ v2 = df.loc[df['word']=='acid rain']['definition']
 result = tuple(df.loc[df['word']=='acid rain']['definition'])
 result = tuple(df.loc[df['word']=='acid']['definition'])
 
+command + D or ctrl + D for copy the line
+
+quasar.dev page
+Vue(.js) Components # javascript framework
