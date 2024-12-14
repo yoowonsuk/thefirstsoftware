@@ -27,3 +27,41 @@ help(summyday.Weather)
 pypi.org
 Name: Ardit Sulce
 In his mail, arditsulce@gmail.com
+
+python setup.py sdist
+=> dist folder & MANIFEST
+
+In Thonny, Tools -> Manage packages -> twine -> Find package from PyPi -> install
+twine upload --skip-existing dist/*
+=> Enter your username: ardit123
+
+find sunnyday package in Thonny or pip install sunnyday
+dir /b in windows 
+
+python
+import sunnyday
+
+
+openweathermap.org/weather-conditions
+URL is http://openweathermap.org/img/wn/10d@2x.png
+
+
+again with new version
+python setup.py sdist
+twine upload --skip-existing dist/*
+
+'''
+python
+import sunnyday
+sunnyday
+
+OR
+Thonny -> tools -> manage package -> suunyday -> upgrade
+
+OR
+pip install sunnyday --upgrade --user
+'''
+
+from sunnyday import Weather
+weather1 = Weather(apikey = "26631f0f41b95fb9f5ac0df9a8f43c92", city = "Madrid")
+weather1.next_12h_simplified()

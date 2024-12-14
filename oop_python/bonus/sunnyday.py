@@ -31,6 +31,9 @@ class Weather:
     # Simplified data for the next 12 hours:
     >>> weather1.next12h_simplified()
 
+    Sample url to get sky condition icons:
+    http://openweathermap.org/img/wn/10d@2x.png
+
     """
     def __init__(self, apikey, city=None, lat=None, lon=None):
         if city:
@@ -63,7 +66,7 @@ class Weather:
         """
         simpe_data = []
         for dicty in self.data['list'][:4]:
-            simple_data.append(dicty['dt_txt'], dicty['main']['temp'], dicty['weather'][0]['desciption'])
+            simple_data.append(dicty['dt_txt'], dicty['main']['temp'], dicty['weather'][0]['desciption'], dicty['weather'[0]['icon'])
         return simple_data
         #return (self.data['list'][0]['dt_txt'], self.data['list'][0]['main']['temp'], self.data['list'[0]['weather'][0]['description'])
 
@@ -75,3 +78,10 @@ f"http://api.openweathermap.org/data/2.5/forcast?q={city}&APPID={apikey}&units=i
 weather = Weather(apikey = "26631f0f41b95fb9f5ac0df9a8f43c92", city = "Valencia")
 print(weather.data)
 pprint.print(weather.next_12h())
+
+
+from sunnyday import Weather
+weather = Weather(apikey = "26631f0f41b95fb9f5ac0df9a8f43c92", city = "Madrid")
+
+
+weather1.next_12h_simplified()[0][-1]
