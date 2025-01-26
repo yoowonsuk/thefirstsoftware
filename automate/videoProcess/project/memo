@@ -1,0 +1,21 @@
+Project Requirements
+Project description
+
+Your task for this project is to write a program that reads a video and censors peoples' faces in the video replacing them with cat faces. You have a sample video attached to the resources. Once you write the program, consider sharing it with other students. You can copy-paste the code in the course QA forum.
+
+Resources for this lecture
+
+
+
+https://replit.com/@ArditS/Censoring-Faces-in-Video#blurred_smile.avi
+https://replit.com/@ArditS/Censoring-Faces-in-Video-done#blurred_smile.avi
+https://docs.opencv.org/4.x/d6/d00/tutorial_py_root.html
+
+
+
+Project Solution 2: Censoring Faces Using Filled Rectangles
+Another solution would be to draw filled rectangles on top of the video. The code below the picture does just that.
+
+
+Project Solution 3: Censoring Faces Using a Cat Face
+Another solution would be to overlay an image (e.g., a cat face on top of the human face). You can find the code for that below the picture.

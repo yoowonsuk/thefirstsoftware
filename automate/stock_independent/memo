@@ -1,0 +1,30 @@
+Note: This is an independent student project which you are expected to complete on your own. The project covers the concepts you have learned throughout the last few sections. Once you complete the project, you can show off your code in the course QA forum to share it with other students. You can provide the GitHub link to your source code or just copy-paste the code directly in the QA.
+
+Project description
+
+This project consists of building a Python app that scrapes the stock price change percentage from this webpage: https://zse.hr/en/indeks-366/365?isin=HRZB00ICBEX6
+
+If the percentage goes less than -0.10%, the app should send an email to your email address. For example, if the percentage goes to -0.12% the app should send an email. If you prefer, you can also send an SMS instead of an email.
+
+To complete this you need to have taken these sections:
+
+Sending Emails
+
+Browser Automation and Web Scraping or Sending SMS
+
+Project Solutions
+Different students have provided different solutions to this project. Below you will find the source code of those solutions:
+
+By Jose Garza: https://github.com/ChandalaSaturnino/Scrape-Stock-Excercise
+
+By Ali Omrani: https://www.udemy.com/course/automate-everything-with-python/learn/#questions/16574728/
+
+By Yon Co: https://github.com/yonatan-co/Stock-Price-Change-Notifer
+
+By JK: https://github.com/randomcoder5/stock-scraper
+
+By Rodrigo Valle: https://github.com/RVP97/Stock-Price-Notifier
+
+By Mario Kunauskas: https://github.com/Keperoze/projects
+
+Note: The list will grow as more students submit their code.

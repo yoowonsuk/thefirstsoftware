@@ -1,0 +1,10 @@
+Project Requirements
+For this project, your task is to create a program that takes as input words in English and returns the definitions of those words. The program should have a desktop GUI. Here are a few things to note:
+
+1. You can use PyQt6 for the GUI using the knowledge you got in the Web Apps and Desktop GUI Apps section.
+
+2. You can use the word definition program that we built previously in the Miscellaneous section to find the definitions of words.
+
+3. You can use the attached JSON dataset to get the definitions of English words.
+
+The app can look like below (or better):

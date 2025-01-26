@@ -1,0 +1,34 @@
+https://newsapi.org/
+
+example key: 12eccb8fe5b24c5b97839805908
+
+https://newsapi.org/v2/everything?qInTitle=stock%20market&from=2022-2-27&to=2022-2-28&sortBy=popularity&language=en&apiKey=890603a55bfa47048e4490069ebee18c
+https://docs.python-requests.org/en/latest/
+https://replit.com/@ArditS/News-API#main.py
+https://replit.com/@ArditS/News-API-done#main.py
+
+https://replit.com/@ArditS/News-API-Extended#main.py
+https://replit.com/@ArditS/News-API-Extended-done#main.py
+
+https://replit.com/@ArditS/News-API-Headlines#main.py
+https://replit.com/@ArditS/News-API-Headlines-done#main.py
+
+openweathermap.org/api
+https://replit.com/@ArditS/Weather-Forecast-API#main.py
+https://replit.com/@ArditS/Weather-Forecast-API-done#main.py
+
+https://replit.com/@ArditS/Create-Your-Own-Currency-Rate-API#main.py
+https://replit.com/@ArditS/Create-Your-Own-Currency-Rate-API-done#main.py
+https://flask.palletsprojects.com/en/stable/
+
+https://replit.com/@ArditS/Working-with-the-Facebook-API#main.py
+https://replit.com/@ArditS/Working-with-the-Facebook-API-done#main.py
+https://docs.python-requests.org/en/latest/
+https://www.json.org/json-en.html
+
+devlopers.facebook.com
+=> get started(register)
+=> create app
+=> More -> Tools -> Graph API -> generate access token + click your app + User Token in User or Page + add "user_posts" & "user_photos" to Permissions then generate access token
+=> submit (me?fields=id,name query in the beginning) 9:31
+=> Get Code -> curl
